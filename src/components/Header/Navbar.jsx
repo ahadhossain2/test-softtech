@@ -2,6 +2,7 @@ import React from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobMenu from "./MobMenu";
 import { Menus } from "./../../Data/utils";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,8 +10,8 @@ const Navbar = () => {
       <nav className="px-16 flex items-center justify-between w-full max-w-9xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-x-3">
-          <a
-            href="/home"
+          <Link
+            to="/home"
             className="flex items-center text-xl font-extrabold tracking-wide text-[#1E5470] hover:text-[#031A09] transition-colors"
           >
             <img
@@ -19,7 +20,7 @@ const Navbar = () => {
               className="w-8 h-8 object-contain rounded-md mr-3"
             />
             SoftTech
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -32,12 +33,12 @@ const Navbar = () => {
         <div className="flex items-center gap-x-4">
           {/* Contact Button */}
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="bg-gradient-to-r from-[#1E5470] to-[#2a7fa3] text-white hover:scale-105 flex items-center gap-2 px-7 py-3 font-semibold rounded-full shadow-lg transition-all duration-300"
           >
             Contact Us
-          </a>
+          </Link>
           {/* Mobile Menu */}
           <div className="lg:hidden">
             <MobMenu Menus={Menus} />
